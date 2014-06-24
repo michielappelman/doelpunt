@@ -1,0 +1,7 @@
+feed: 
+api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+to_email: 
+from_email: 
+
+debug: on
+debug_file: debug.log
