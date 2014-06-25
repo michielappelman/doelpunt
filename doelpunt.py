@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import os
 import time
 import yaml
 import smtplib
@@ -15,6 +16,9 @@ except:
     logging.debug('Config file not found!')
     print "Config file not found!"
 config = yaml.load(stream)
+
+# Write PID file
+file(config['pid_file'], 'w').write(str(os.getpid()))
 
 if config['debug']:
     logging.basicConfig(level=logging.DEBUG, filename=config['debug_file'],
@@ -94,3 +98,4 @@ while True:
         else:
             sleep = 60
     time.sleep(sleep)
+os.unlink(pidfile)

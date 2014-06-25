@@ -5,3 +5,4 @@ from_email:
 
 debug: on
 debug_file: debug.log
+pid_file: /var/run/doelpunt.pid
