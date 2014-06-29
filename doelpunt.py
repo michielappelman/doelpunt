@@ -76,7 +76,7 @@ while True:
                 yo_all(config['api_key'])
 
                 # Add goal to list
-                goals.append(i.guid.string)
+                goals.append(i.pubdate.string)
 
                 # Write goal to file
                 logging.debug('Writing goal to file.')
